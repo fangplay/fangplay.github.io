@@ -39,21 +39,6 @@
 			</li>
 		</ul>
 	</div> -->
-	<script>
-
-		export default {
-			  computed:{
-				calculateAge: function() {
-				  let currentDate = new Date();
-				  let birthDate = new Date("1995/08/05");
-				  let difference = currentDate - birthDate;
-				  let age = Math.floor(difference/31557600000);
-				  return age
-				}
-			  }
-			}
-		
-		</script>
 	<div class="container">
 		<div class="tab-pane active" id="home" role="tabpanel">
 			<h1>FANGPLAY Sirirak Official Website</h1>
@@ -74,6 +59,21 @@
         				<p>Japanese Nickname : ファングプレイ</p>
         				<p>Korean Nickname : 팡플레이</p>
         				<p>Birth Date : 5 August 1995</p>
+						<script>
+
+							export default {
+								  computed:{
+									calculateAge: function() {
+									  let currentDate = new Date();
+									  let birthDate = new Date("1995/08/05");
+									  let difference = currentDate - birthDate;
+									  let age = Math.floor(difference/31557600000);
+									  return age
+									}
+								  }
+								}
+							
+							</script>
         				<p>Age : {{calculateAge}} Years Old</p>
         				<p>Blood Line : B</p>
 					</div>
