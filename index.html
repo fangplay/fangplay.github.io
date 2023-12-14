@@ -29,6 +29,24 @@
 			}
 		
 		</script> -->
+	<script>
+		function ageCalculator(){
+			var birthDate = new Date("08/05/1995");
+			var currentDate = new Date.now();
+
+			//calculate age
+			var difference = currentDate - birthDate.getTime();
+
+			//convert age to date format
+			var date_diff = new Date(difference);
+
+			//convert to year format
+			var age_year = date_diff.getFullYear();
+
+			//return year format
+			return age_year;
+		}
+	</script>
     <title>FANGPLAY Sirirak Official Website</title>
   </head>
   <body>
@@ -68,21 +86,7 @@
                 <p>Japanese Nickname : ファングプレイ</p>
                 <p>Korean Nickname : 팡플레이</p>
                 <p>Birth Date : 5 August 1995</p>
-                <script>
-                  export default {
-                    computed: {
-                      calculateAge: function () {
-                        let currentDate = new Date();
-                        let birthDate = new Date("1995/08/05");
-                        let difference = currentDate - birthDate;
-                        let age = Math.floor(difference / 31557600000);
-                        return age;
-                      },
-                    },
-                  };
-                </script>
-                <p>Date : {{currentDate}}</p>
-                <p>Age : {{calculateAge}} Years Old</p>
+                <p>Age : {{age_year}} Years Old</p>
                 <p>Blood Line : B</p>
               </div>
               <div class="col-md-5">
